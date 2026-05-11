@@ -1,7 +1,7 @@
 from .models import Cliente
 from django import forms
 
-class Clienteform(forms.ModelForm):
+class ClienteForm(forms.ModelForm):
     nome = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}))
     cpf = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}))
     telefone = forms.CharField(widget=forms.TextInput(attrs={"class": "form-control"}))

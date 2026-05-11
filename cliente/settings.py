@@ -16,19 +16,22 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-APPS_DIR = str(BASE_DIR/ "apps")
+APPS_DIR = str(BASE_DIR / "apps")
 sys.path.insert(0, APPS_DIR)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-jh+ruda+)9d6*#nl*9znk_r+m*kssot=b^^8-(13&(6+4d-1va'
+SECRET_KEY = 'django-insecure-q=g6guy4j&ffryi(ca@r-&frcu8%c_r$d^5q_i1grulpp2*xfv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+LOGIN_URL = '/login/'
 
 
 # Application definition
@@ -48,7 +51,7 @@ PROJETO_APPS = [
 
 TERCEIRO_APPS = []
 
-INSTALLED_APPS = DJANGO_APPS + TERCEIRO_APPS + PROJETO_APPS
+INSTALLED_APPS = DJANGO_APPS + PROJETO_APPS + TERCEIRO_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -115,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'America/Sao_paulo'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
