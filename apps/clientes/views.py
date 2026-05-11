@@ -72,7 +72,6 @@ def login_usuario(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             usuario = authenticate(username=username, password=password)
-            
             if usuario is not None:
                 login(request, usuario)
                 return redirect('novo_cliente')
